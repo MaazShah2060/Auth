@@ -1,0 +1,29 @@
+
+# Client Class Documentation
+
+The following parameters are configurable for the API Client:
+
+| Parameter | Type | Description |
+|  --- | --- | --- |
+| `authorization` | `string` | *Default*: `'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxMyIsImp0aSI6Ijk4OGNiM2E2OTc0NjMxOTQwMWI5ODczNjA2YjU1N2U0MTNmNmViNjQ3MjlhZmM2ZTQzZTExY2JkM2YxNmYzYzRkMzM5ZDg2ZGE4ZTVmMTkyIiwiaWF0IjoxNjM0NTYwMjY2Ljk4NzMzNzExMjQyNjc1NzgxMjUsIm5iZiI6MTYzNDU2MDI2Ni45ODczNDA5MjcxMjQwMjM0Mzc1LCJleHAiOjE2NjYwOTYyNjYuOTg0MDY2MDA5NTIxNDg0Mzc1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.lbnBies2oy0H4kGu0QY5O2YZgng6bFbsaukFQ1meQfMGJ22ka3e-p6mK8xWwbs4Pxw1d1BWtj54fH7GnETUipN0CI10R64qX6DzqUWtMaX_lw5HgdUSwDXy9Vw3ZuGctCErKbQtKhdFTUbXvtAuodj6aXfdwmMsicNTBnYuLMnxfFfKs7Df8rHHH0ZxdxxWF1ZwqqQ3-qtG_lhOoz18Ux7ZHA20xkGjC6i_NugsQfpgZpel20A7nYCaqPHNCDC-yukN5DjaF2MIlE2wkz5ib6uTnHOBSCuvf-WGdRaDM1Un-S_-3XuaJjdBIMN_BvbWEKihe_zyR8o1V_288vqy6HuwmuDjwJi0_Yv-H0EytBDBDf-kYkVx_2VZTP-4UhNxgdbgt8V_gXey-0jZx4vWz25FiQr-6oBiLvILspGp2QqQQEV5QDk6Flt8f2LMpMUQiXF3DG9D04xRP1itYZHGREwgsR4hTSWJeONULo2bH5BmZ-NBzHJucfwbmbavT09EVXbN-Mqiz4KX_dLTUaNDRRl33CqZSg8QnOBGZJ4DGSwRamBz5MLuGGkFclAdIvEEdlHrb0JnwsiC4SvoZ3FGH4CvC2kM_veqtypSoWKhN-TgJvK2T4l9jInDBBYR02eYsaIKuP5hlKPV5vSR2KSz26P6QFxCa-clUTL9ixdyMBV0'` |
+| `timeout` | `int` | Timeout for API calls |
+
+The API client can be initialized as follows:
+
+```php
+$client = new AuthLib\AuthClient([
+    // Set authentication parameters
+    'authorization' => 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxMyIsImp0aSI6Ijk4OGNiM2E2OTc0NjMxOTQwMWI5ODczNjA2YjU1N2U0MTNmNmViNjQ3MjlhZmM2ZTQzZTExY2JkM2YxNmYzYzRkMzM5ZDg2ZGE4ZTVmMTkyIiwiaWF0IjoxNjM0NTYwMjY2Ljk4NzMzNzExMjQyNjc1NzgxMjUsIm5iZiI6MTYzNDU2MDI2Ni45ODczNDA5MjcxMjQwMjM0Mzc1LCJleHAiOjE2NjYwOTYyNjYuOTg0MDY2MDA5NTIxNDg0Mzc1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.lbnBies2oy0H4kGu0QY5O2YZgng6bFbsaukFQ1meQfMGJ22ka3e-p6mK8xWwbs4Pxw1d1BWtj54fH7GnETUipN0CI10R64qX6DzqUWtMaX_lw5HgdUSwDXy9Vw3ZuGctCErKbQtKhdFTUbXvtAuodj6aXfdwmMsicNTBnYuLMnxfFfKs7Df8rHHH0ZxdxxWF1ZwqqQ3-qtG_lhOoz18Ux7ZHA20xkGjC6i_NugsQfpgZpel20A7nYCaqPHNCDC-yukN5DjaF2MIlE2wkz5ib6uTnHOBSCuvf-WGdRaDM1Un-S_-3XuaJjdBIMN_BvbWEKihe_zyR8o1V_288vqy6HuwmuDjwJi0_Yv-H0EytBDBDf-kYkVx_2VZTP-4UhNxgdbgt8V_gXey-0jZx4vWz25FiQr-6oBiLvILspGp2QqQQEV5QDk6Flt8f2LMpMUQiXF3DG9D04xRP1itYZHGREwgsR4hTSWJeONULo2bH5BmZ-NBzHJucfwbmbavT09EVXbN-Mqiz4KX_dLTUaNDRRl33CqZSg8QnOBGZJ4DGSwRamBz5MLuGGkFclAdIvEEdlHrb0JnwsiC4SvoZ3FGH4CvC2kM_veqtypSoWKhN-TgJvK2T4l9jInDBBYR02eYsaIKuP5hlKPV5vSR2KSz26P6QFxCa-clUTL9ixdyMBV0',
+]);
+```
+
+## auth Client
+
+The gateway for the SDK. This class acts as a factory for the Controllers and also holds the configuration of the SDK.
+
+## Controllers
+
+| Name | Description |
+|  --- | --- |
+| getAPIController() | Gets APIController |
+
